@@ -1,12 +1,9 @@
- 
-import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 class main
 {
-    p panel = new p();
-    JFrame f = new JFrame("Tic-Tac-Toe Made By Siddharth Yadav");
-    static Color BackgroundColor = Color.pink;
+    static Color BackgroundColor = Color.white;
     static Color CrossColor = Color.blue;
     static Color RoundColor = Color.magenta;
     static  boolean single_player = true;
@@ -15,12 +12,10 @@ class main
     static int state[]={0,0,0,0,0,0,0,0,0};
     static boolean tobedone = false;
     static boolean firstMove=false;
+    p panel = new p();
+    JFrame f = new JFrame("Tic-Tac-Toe By Siddharth Yadav");
     int best[]={4,0,2,6,3,8,1,7,5};
     JMenu Player1,Player2;
-    public static void main(String agrs[])
-    {
-        main t =new main();
-    }
     public main()
     {
         f.setSize(800,800);
@@ -108,6 +103,10 @@ class main
                 }
             }
         }
+    }
+
+    public static void main(String agrs[]) {
+        main t = new main();
     }
 
     public class p extends JPanel implements MouseListener,MouseMotionListener
@@ -383,11 +382,8 @@ class main
                     counter = -1;
                     break;
                 }
-            } 
-            if(counter!=0)
-                return false;
-            else
-                return true;
+            }
+            return counter == 0;
         }
 
         public int[][] coordinate(int block)
