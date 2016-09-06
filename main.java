@@ -5,7 +5,7 @@ import java.awt.*;
 class main
 {
     p panel = new p();
-    JFrame f = new JFrame("Tic-Tac-Toe");
+    JFrame f = new JFrame("Tic-Tac-Toe Made By Siddharth Yadav");
     static Color BackgroundColor = Color.pink;
     static Color CrossColor = Color.blue;
     static Color RoundColor = Color.magenta;
@@ -23,7 +23,7 @@ class main
     }
     public main()
     {
-        f.setSize(600,600);
+        f.setSize(800,800);
         f.setVisible(true);
         f.setLayout(new GridLayout(1,1));
         f.add(panel);
